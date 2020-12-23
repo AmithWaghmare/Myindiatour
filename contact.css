@@ -1,0 +1,56 @@
+.contact{
+  width:100%;
+  margin-bottom:-580px;
+}
+.contact input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #519872;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color:white;
+}
+
+.contact  #country
+{
+  background-color:white;
+ border: 1.5px solid #519872;
+ width:868px;
+ height:60px;
+}
+.contact input[type=submit] {
+  background-color: #3F51B5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+.contact input[type=submit]:hover {
+  background-color: green;
+}
+.contact h1{
+  color:black;
+  background-color:#dbe3e5;
+  width:100%;
+  height:20px;
+  margin-top:0px;
+  padding-bottom:40px;
+  margin-bottom:-5px;
+}
+
+.contact h1{
+  padding-top:50px;
+  color:green;
+}
+.contact .button{
+  width:100px;
+  color:white;
+  padding-top:5px;
+  padding-bottom:5px;
+  background-color:#3F51B5;
+}
+.contact .button:hover
+{
+ background-color:green;
+}

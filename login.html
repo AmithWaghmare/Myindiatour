@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>َLogin Form</title>
+	<link rel="stylesheet" href="signin.css">
+  </head>
+  <body>
+<form  action="index.html" method="post" onsubmit="return validlogin()" name="logform" class="login">
+  <span>
+     <h1>Login</h1>
+	 <br>
+   </span>
+  <input type="text" name="fname" placeholder="Username" id="uname">
+  <input type="password" name="password" placeholder="Password" id="pass">
+  <input type="submit" name="" value="Login" action="index.html" >
+  <br>
+    <a href="registration.html" style="color:whitesmoke";>New User? Sign Up here</a>
+</form>
+<script>
+function validlogin() {
+ 
+  var uname = document.forms["logform"]["uname"].value;
+  var pass = document.forms["logform"]["password"].value;
+  var numbers = /^[0-9]+$/; 
+var alphabets=/^[A-Za-z]+$/;
+
+   if(uname==null || uname=="")
+   {  
+  alert("Username and Password should not blank");  
+  return false;  
+   }
+ 
+  else if(uname.match(numbers))
+      {
+      alert("Enter only Alphabets in User Name");
+      return false;
+      }
+  else if(pass.length<10 || pass.length>10)
+      {  
+       alert("Password must be  10  characters long");  
+      return false;  
+      } 
+  
+ else{
+  alert("Successfully Logined into the website");
+    return true;
+  }
+}
+</script>
+</body>
+</html>

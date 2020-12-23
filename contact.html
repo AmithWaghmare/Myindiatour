@@ -1,0 +1,71 @@
+<html>
+<head>
+<link href="contact.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="border-style:solid;border-width:3px;background-color:#c6ebc9">
+<form name="myform" method="post" onsubmit="return submitform()" action="index.html"> 
+<center>
+        <font color="#2f2519" size="5"><u>CONTACT FORM</u></font><br><br><br><br>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Enter Name">
+        <br><br><br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number"><br><br><br><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="BANGLADESH">Bangladesh</option>
+          <option value="Canda">Canada</option>
+          <option value="FRANCE">France</option>
+          <option value="HUNGARY">Hungary</option>
+          <option value="INDIA">India</option>
+          <option value="ITALY">Italy</option>
+          <option value="JAPAN">Japan</option>
+          <option value="RUSSIA">Russia</option>
+           <option value="UAE">UAE</option>
+           <option value="USA">USA</option>
+        </select>
+        <br><br><br><br>
+        <label for="query">Query:</label>
+        <textarea id="query" name="query" placeholder="Write your query in detail" rows="5" cols="20"></textarea>
+          <p><button class="button" >submit</button></p>
+      </center>
+      </form>
+	  <script>
+function submitform(){  
+var name=document.myform.firstname.value;  
+var phone=document.myform.mobile.value;
+var query=document.myform.query.value; 
+var numbers = /^[0-9]+$/; 
+var alphabets=/^[A-Za-z]+$/;
+
+if (name==null || name==""){  
+  alert("Name and Mobile No. can't be blank");  
+  return false;  
+}
+else if(phone.length<10 || phone.length>10){  
+  alert("Number must be  10  characters long.");  
+  return false;  
+  }  
+  else if(name.match(numbers))
+      {
+      alert("Enter only Alphabets in Full Name");
+      return false;
+      }
+  else if(phone.match(alphabets))
+  {
+    alert("Enter Only Numbers in phone");
+    return false;
+  }
+  else if(query.length>=200)
+  {
+    alert("Query Should have 200 Characters only");
+    return false;
+  }
+  else{
+    alert(" Submitted Successfully,Thank u for submitting the form");
+    return true;
+  }
+} 
+</script>
+</body>
+</html>
